@@ -4,7 +4,7 @@ Algoritmi Paraleli si Distribuiti---Tema-1
 > Student: Bogdan Alexandra-Lacramioara
 
 > Grupa: 334CD
-=====================
+
 
 * Biblioteci folosite 
  > #include <pthread.h>
