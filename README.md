@@ -6,6 +6,8 @@ Algoritmi Paraleli si Distribuiti---Tema-1
 > Grupa: 334CD
 
 
+
+
 * Biblioteci folosite 
  > #include <pthread.h>
 
