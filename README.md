@@ -2,6 +2,7 @@ Algoritmi Paraleli si Distribuiti---Tema-1
 ====================
 
 > Student: Bogdan Alexandra-Lacramioara
+
 > Grupa: 334CD
 =====================
 
@@ -12,11 +13,17 @@ Algoritmi Paraleli si Distribuiti---Tema-1
  > bariera
 
 * Descriere fisiere
+  
 -> helpers.c / helpers.h
+
 -> paralelizare.c / paralelizare.h  = aici am implementat functiile paralelizate rescale_image, sample_grid si march
+
 -> tema1_par.c = main
+
 -> Makefile
+
 -> README 
+
 
 
 *** Detalii implementare ***
@@ -64,21 +71,31 @@ Am facut impartirea pe threaduri dupa formula din cadrul laboratorului 2:
 * Pentru ** sample_grid **
 
 1. pentru primele doua bucle for paralelizate
+   
+
 int start_g = data->thread_id * (double) p / data->num_threads
+
 int end_g = mymin((data->thread_id + 1) * (double) p / data->num_threads, p) 
+
      
     ,unde 
     p = data->new_image->x / data->step_x
     q = data->new_image->y / data->step_y
 
-2. pentru a treia bucla for paralelizata
+3. pentru a treia bucla for paralelizata
+
+
 int start_q = data->thread_id * (double)q / data->num_threads;
+
 int end_q = mymin((data->thread_id + 1) * (double)q / data->num_threads, q);
+
     
 * Pentru ** march **
 
 int start_m = data->thread_id * (double)p_m / data->num_threads
+
 int end_m = mymin((data->thread_id + 1) * (double)p_m / data->num_threads, p_m)
+
 
     ,unde 
     p_m = data->new_image->x / data->step_x
@@ -107,6 +124,7 @@ Alocarea de memorie pentru grid si rescale_image se realizeaza in functiile auxi
 ** Rulare **
 
 -> make : compileaza sursele
+
 -> make clean : sterge tema1, tema1_par 
 
 ** Feedback **
